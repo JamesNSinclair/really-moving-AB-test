@@ -12,14 +12,14 @@ createTest()
 
 function createImage(){
 const mainImage = document.querySelector(".main-article-image");
-let imageTest = document.createElement("div");
-imageTest.id = 'testImage'
-imageTest.className = 'main-test-image'
-imageTest.style = "align-self: center;" +
+let imageNew = document.createElement("div");
+imageNew.id = 'newImage'
+imageNew.className = 'main-test-image'
+imageNew.style = "align-self: center;" +
     "width: fit-content;" +
     "position: relative;"
-mainImage.replaceWith(imageTest);
-imageTest.appendChild(mainImage);
+mainImage.replaceWith(imageNew);
+imageNew.appendChild(mainImage);
 
 }
 
@@ -28,9 +28,9 @@ BANNEER IS CREATED, STYLED & APPENDED
 ========================================== */
 
 function createBanner(){
- let ban = document.createElement("div");
- ban.className = "banner"
- ban.style = "display: flex;" +
+ let banner = document.createElement("div");
+ banner.className = "banner"
+ banner.style = "display: flex;" +
     "align-items: center;" +
     "justify-content: flex-end;" +
     "text-align: right;" +
@@ -43,12 +43,12 @@ function createBanner(){
     "font-size: 12px;" +
     "padding-right: 5px;"
 
-  const tester = document.querySelector("#testImage");
+  const imageBase = document.querySelector("#newImage");
 
-  ban.innerHTML =
+  banner.innerHTML =
   "<span style='margin-right: 15px;'><h2 style='margin:5px; color: white;'><strong>Most Helpful</strong></h2> <p style='margin:5px; margin-left: 11.5rem;'>Our Readers Voted This Article Their Favourite</p></span>" +
    "<i class='rm-icon-font rm-icon-font--suggestions' style='font-size: 35px;'></i>"
-  tester.appendChild(ban)
+  imageBase.appendChild(banner)
 }
 
 /*========================================
@@ -56,7 +56,7 @@ BADGE IS CREATED, STYLED & APPENDED
 ========================================== */
 
  function createBadge(){
-     const tester = document.querySelector(".banner");
+     const bannerBase = document.querySelector(".banner");
  let badge = document.createElement("div");
  badge.className = "badge"
  badge.style = "position: absolute;" +
@@ -76,8 +76,11 @@ BADGE IS CREATED, STYLED & APPENDED
    "font-size: 12px;"
 
  badge.innerHTML =
-  "<p style='margin: 1px;'>Voted</p>" + "<p style='color: #D12281; margin:1px;'>Really Helpful</p>" + "<p style='margin: 1px;'>By Our</p>" + "<p style='margin: 1px;'>Readers</p>"
-  tester.appendChild(badge)
+  "<p style='margin: 1px;'>Voted</p>" +
+   "<p style='color: #D12281; margin:1px;'>Really Helpful</p>" +
+   "<p style='margin: 1px;'>By Our</p>" +
+   "<p style='margin: 1px;'>Readers</p>"
+  bannerBase.appendChild(badge)
 }
 
 /*========================================
